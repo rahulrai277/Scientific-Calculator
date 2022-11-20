@@ -2,24 +2,48 @@
 <html>
 
 <head>
-    <!-- Minified Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/calculator.css">
+	 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <div class="container">
 
-        <h2>Scientific Calculator App</h2>
-        <style> body {
-    background: rgb(54, 54, 54) url(background.jpg) center center no-repeat;
+
+    <div class="container ">
+					<style> body {
+    background: url(background.jpg) center center no-repeat;
     background-size: cover;
     color:#ffff00;
-}</style>
+}
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #cc3300;
+   color: white;
+   
+   text-align: center;
+   
+			padding-top:15px;
+			padding-bottom:10px}
+
+
+</style>
+        <h1><b>Scientific Calculator</b> </h1>
+		<hr>
 
         <form id="calculator">
-            <div class="form-group">
+            <div class="form-group ">
                 <div class="col-md-4" class="display">
                     <input type="text" id="show" class="form-control" readonly size="18">
                 </div>
@@ -51,13 +75,14 @@
 
                 <button type="button" class="btn btn-md btn-primary" value="0" name="btn0" onclick="display(btn0.value)"> 0</button>
                 <button type="button" class="btn btn-md btn-primary" value="." name="dotbtn" onclick="display(dotbtn.value)"> .</button>
-                <button type="button" class="btn btn-md btn-primary" value="<-- " name="backbtn" onclick="backspace()"> <-- </button>
+              <button type="button" class="btn btn-md btn-primary" value="**" name="power" onclick="display(power.value)">X^Y</button>
                 <button type="button" class="btn btn-md btn-primary" value="/" name="dividebtn" onclick="display(dividebtn.value)"> /</button>
                 <button type="button" class="btn btn-md btn-primary" value="Cos" name="btnCos" onclick="cos(btnCos)">Cos</button>
 
                 <br />
                 <button type="button" class="btn btn-md btn-primary" value="+/-" name="plusminus" onclick="signChange()">+/-</button>
-                <button type="button" class="btn btn-md btn-primary" value="C" name="clear" onclick="display(clear.value)">C</button>
+				     <button type="button" class="btn btn-md btn-primary" value=" , " name="btnExp" onclick="exponent(btnExp)"> EXP</button>
+                
                 <button type="button" class="btn btn-md btn-primary" value="pi" name="btnPI" onclick="pier(btnPI)"> PI</button>
                 <button type="button" class="btn btn-md btn-primary" value="sqrt" name="btnSqrt" onclick="square(btnSqrt)"> Sqrt</button>
                 <button type="button" class="btn btn-md btn-primary" value="Tan" name="btnTan" onclick="tan(btnTan)">Tan</button>
@@ -65,8 +90,9 @@
                 <br />
 
                 <button type="button" class="btn btn-md btn-primary" value="In" name="btnLog" onclick="log(btnLog)">Log </button>
-                <button type="button" class="btn btn-md btn-primary" value=" , " name="btnExp" onclick="exponent(btnExp)"> EXP</button>
-                <button type="button" class="btn btn-md btn-primary" value="**" name="power" onclick="display(power.value)">X^Y</button>
+					<button type="button" class="btn btn-md btn-primary" value="C" name="clear" onclick="display(clear.value)">Clear</button>
+                
+				<button type="button" class="btn btn-md btn-primary" value="<-- " name="backbtn" onclick="backspace()"> Back </button>
                 <button type="button" class="btn btn-md btn-primary" value="(" name="btnOpen" onclick="display(btnOpen.value)">(</button>
                 <button type="button" class="btn btn-md btn-primary" value=")" name="btnClose" onclick="display(btnClose.value)">)</button>
 
@@ -76,13 +102,54 @@
             </div>
         </form>
 
-    </div>
+    
+	</div>
+	
+	
+	
+<!-- Footer -->
+<footer class="page-footer font-small ">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" >© 2020 Copyright :
+    <a href="https://flame-scientific-calculator.netlify.app/"> &nbsp; Flame-scientific-calculator</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="js/jquery-3.2.1.js"></script>
     <!-- Minified JavaScript -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/calculator.js"></script>
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+
 
 </body>
 
